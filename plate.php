@@ -1,4 +1,4 @@
-<?php $plate=$ _POST[ 'plate']; $platestate=$ _POST[ 'state']; $submitUrl="http://freebackgroundcheck.org/plate/results.php?topPlate=" . $plate . "&topPlateState=" . $platestate . "&topPlateSearch=Search"; $content=f ile_get_contents($submitUrl); $first_step=e xplode( '<div class="pf-rs-info-text">' , $content ); $second_step=e xplode( "</div>" , $first_step[1] ); ?>
+<?php $plate=$_POST['plate']; $platestate=$_POST['state']; $submitUrl="http://freebackgroundcheck.org/plate/results.php?topPlate=" . $plate . "&topPlateState=" . $platestate . "&topPlateSearch=Search"; $content=file_get_contents($submitUrl); $first_step=explode( '<div class="pf-rs-info-text">' , $content ); $second_step=explode( "</div>" , $first_step[1] ); ?>
 <html>
 <head>
     <style>
@@ -60,7 +60,7 @@
             <form class="well form-horizontal">
                 <fieldset>
                     <legend>License Plate Checker:
-                        <?php echo $_POST[ 'plate'] . ' ('; echo strtoupper($_POST[ 'state']); echo ') '; ?>
+                        <?php echo $_POST['plate'] . ' ('; echo strtoupper($_POST['state']); echo ') '; ?>
                     </legend>
                     <br><br>
                     <div class="form-group">
