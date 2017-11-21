@@ -1,7 +1,7 @@
 <?php
 
 $plate = $_POST['plate'];
-$platestate= $_POST['state'];
+$platestate = $_POST['state'];
 
 $submitUrl = "http://freebackgroundcheck.org/plate/results.php?topPlate=" . $plate . "&topPlateState=" . $platestate . "&topPlateSearch=Search";
 
@@ -80,7 +80,7 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 <fieldset>
 
 <!-- Form Name -->
-<legend>License Plate Checker</legend>
+<legend>License Plate Checker: <?php echo $_POST['plate'] . ' ('; echo strtoupper($_POST['state']); echo ') '; ?></legend>
 <br><br>
 <!-- Text input-->
 
