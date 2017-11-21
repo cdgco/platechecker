@@ -1,6 +1,5 @@
 <?php $plate=$ _POST[ 'plate']; $platestate=$ _POST[ 'state']; $submitUrl="http://freebackgroundcheck.org/plate/results.php?topPlate=" . $plate . "&topPlateState=" . $platestate . "&topPlateSearch=Search"; $content=f ile_get_contents($submitUrl); $first_step=e xplode( '<div class="pf-rs-info-text">' , $content ); $second_step=e xplode( "</div>" , $first_step[1] ); ?>
 <html>
-
 <head>
     <style>
         #parent {
@@ -24,17 +23,9 @@
         }
         #scroll span {
             -webkit-transform: rotate(-90deg);
-            /* Firefox */
-            
             -moz-transform: rotate(-90deg);
-            /* IE */
-            
             -ms-transform: rotate(-90deg);
-            /* Opera */
-            
             -o-transform: rotate(-90deg);
-            /* Internet Explorer */
-            
             filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=3);
             position: absolute;
             top: 50%;
@@ -68,15 +59,10 @@
         <div class="container">
             <form class="well form-horizontal">
                 <fieldset>
-
-                    <!-- Form Name -->
                     <legend>License Plate Checker:
                         <?php echo $_POST[ 'plate'] . ' ('; echo strtoupper($_POST[ 'state']); echo ') '; ?>
                     </legend>
-                    <br>
-                    <br>
-                    <!-- Text input-->
-
+                    <br><br>
                     <div class="form-group">
                         <label class="col-md-4 control-label">License Plate Data:</label>
                         <div class="col-md-4 inputGroupContainer">
@@ -87,7 +73,6 @@
                         </div>
                     </div>
                     <br>
-
                 </fieldset>
                 <br>
                 <br>
@@ -111,5 +96,4 @@
     </script>
     </div>
 </body>
-
 </html>
